@@ -1,6 +1,6 @@
 import React from "react"
 import { observer } from "mobx-react-lite"
-import { ViewStyle, TextStyle } from "react-native"
+import { ViewStyle, TextStyle, ScrollView } from "react-native"
 import { Header, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 import { useStores } from "../../models"
@@ -36,6 +36,7 @@ export const PostDetailsScreen = observer(function PostDetailsScreen() {
   return (
     <Screen style={ROOT} preset="scroll">
       <Header headerText={'postDetailsScreen'} leftIcon={'back'} titleStyle={HEADER} onLeftPress={() => navigation.goBack()} />
+      <ScrollView>
       {renderText("Title", postStore.postDetails.title)}
       {renderText("Created_at", postStore.postDetails.created_at)}
       {renderText("Author", postStore.postDetails.author)}
@@ -50,6 +51,7 @@ export const PostDetailsScreen = observer(function PostDetailsScreen() {
       {renderText("parent_id", postStore.postDetails.parent_id)}
       {renderText("created_at_i", postStore.postDetails.created_at_i)}
       {renderText("objectID", postStore.postDetails.objectID)}
+      </ScrollView>
     </Screen>
   )
 })
