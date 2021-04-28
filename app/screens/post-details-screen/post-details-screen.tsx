@@ -13,7 +13,8 @@ const ROOT: ViewStyle = {
 
 const TEXT: TextStyle = {
   color: color.palette.black,
-  fontSize: 20
+  fontSize: 20,
+  margin:3
 }
 const HEADER: TextStyle = {
   color: color.palette.black,

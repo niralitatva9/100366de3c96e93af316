@@ -6,6 +6,11 @@ import { useNavigation } from "@react-navigation/native"
 import { useStores } from "../../models"
 import { color } from "../../theme"
 import { toJS } from "mobx"
+interface postType{
+  title:string 
+  created_at:string 
+  author:string 
+}
 
 const ROOT: ViewStyle = {
   backgroundColor: color.palette.white,
@@ -46,7 +51,7 @@ export const PostScreen = observer(function PostScreen() {
   const renderText = (label: string, value: any) => (
     <Text text={`${label} : ${value} `} style={TEXT} />
   )
-  const renderItems = ({ item, index }) => {
+  const renderItems = ({ item, index }:{item:postType,index:number}) => {
     return (
       <TouchableOpacity style={CONTAINER} onPress={() => {
         postStore.updatePostDetails(item)
