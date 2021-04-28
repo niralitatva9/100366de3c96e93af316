@@ -41,7 +41,7 @@ export const PostScreen = observer(function PostScreen() {
     return () => {
       clearInterval(interval)
     }
-  })
+  },[])
 
   const renderText = (label: string, value: any) => (
     <Text text={`${label} : ${value} `} style={TEXT} />

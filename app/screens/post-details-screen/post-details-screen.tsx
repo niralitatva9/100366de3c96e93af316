@@ -41,7 +41,14 @@ export const PostDetailsScreen = observer(function PostDetailsScreen() {
       {renderText("url", postStore.postDetails.url)}
       {renderText("points", postStore.postDetails.points)}
       {renderText("story_text", postStore.postDetails.story_text)}
-
+      {renderText("comment_text", postStore.postDetails.comment_text)}
+      {renderText("num_comments", postStore.postDetails.num_comments)}
+      {renderText("story_id", postStore.postDetails.story_id)}
+      {renderText("story_title", postStore.postDetails.story_title)}
+      {renderText("story_url", postStore.postDetails.story_url)}
+      {renderText("parent_id", postStore.postDetails.parent_id)}
+      {renderText("created_at_i", postStore.postDetails.created_at_i)}
+      {renderText("objectID", postStore.postDetails.objectID)}
     </Screen>
   )
 })
